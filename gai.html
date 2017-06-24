@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1400">
+    <meta property="og:image:height" content="873">
+  	<title>3D星球特效 </title>
+
+      <link rel="stylesheet" href="css/style.css">
+  <style>
+    /*#big{*/
+      /*position: relative;*/
+      /*display: block;*/
+      /*top: 0;*/
+      /*left: 0;*/
+      /*width: 800px;*/
+      /*height: 800px;*/
+      /*/!*overflow:hidden;*!/*/
+      /*z-index: 1;*/
+      /*perspective:500px;*/
+    /*}*/
+    .box{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      border-radius:50%;
+      background-color: red;
+      z-index: 1;
+      animation:rot 5s linear infinite ;
+      transform-style:preserve-3d;
+    }
+    @keyframes rot {
+      0%{
+        transform: translateZ(0px);
+      }
+      100%{
+        transform: translateZ(500px);
+
+      }
+    }
+
+  </style>
+  
+</head>
+
+<body>
+  <div id="universe"/>
+  <script src='js/three.min.js'></script>
+      <script src="js/index.js"></script>
+  <div id="big"><div class="box"></div>
+  </div>
+</body>
+</html>
